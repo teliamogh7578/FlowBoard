@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasks Board</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Our styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--
+    This is the only div React needs.
+    React will inject everything inside here.
+  -->
+  <div id="root"></div>
+
+  <!-- React library (the core) -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+  <!-- ReactDOM (puts React components onto the actual page) -->
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel (lets us write JSX like <div> inside JS without a build step) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Our app — type="text/babel" so Babel processes the JSX -->
+  <script type="text/babel" src="script.js"></script>
+
+</body>
+</html>
