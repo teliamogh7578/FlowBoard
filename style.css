@@ -1,34 +1,33 @@
 /*
-  main colors
-  ------------------
-  primary (Blue):
-    Main:   #1a73e8
-    Hover:  #1765cc  #1565cc
-    Dark:   #1565cc
-    Tint:   #e8f0fe 
+  main colors:
+  primary (blue):
+    main:   #1a73e8
+    hover:  #1765cc  #1565cc
+    dark:   #1565cc
+    tint:   #e8f0fe 
 
-  Neutrals (Light mode):
-    Background:   #f8f9fa
-    Surface:           #ffffff
-    Hover:     #f1f3f4
-    Border:            #e0e0e0
-    Text:              #202124
-    Text secondary:    #5f6368
-    Text tertiary:     #80868b
+  neutrals (light mode):
+    background:   #f8f9fa
+    surface:           #ffffff
+    hover:     #f1f3f4
+    border:            #e0e0e0
+    text:              #202124
+    text secondary:    #5f6368
+    text tertiary:     #80868b
 
-  Neutrals (Dark mode):
-    Page background:   #121212
-    Surface:           #1e1e1e
-    Surface hover:     #2d2d2d
-    Border:            #3d3d3d
-    Text:              #e8e8e8
-    Text secondary:    #b0b0b0
-    Text tertiary:     #808080
-    Blue tint dark:    #1a3a4d
+  neutrals (dark mode):
+    page background:   #121212
+    surface:           #1e1e1e
+    surface hover:     #2d2d2d
+    border:            #3d3d3d
+    text:              #e8e8e8
+    text secondary:    #b0b0b0
+    text tertiary:     #808080
+    blue tint dark:    #1a3a4d
 
-  Accent:
-    Green:  #1e8e3e  
-    Red:    #d93025 
+  accent:
+    green:  #1e8e3e  
+    red:    #d93025 
 */
 
 *,

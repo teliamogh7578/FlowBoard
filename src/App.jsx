@@ -13,7 +13,7 @@ import Board from "./components/Board";
 import Modal from "./components/Modal";
 
 export default function App() {
-  // board is nothing but the collection of tasks by column
+  // board will be area where i store all tasks.
   const [board, setBoard] = useState(() => loadBoard());
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
@@ -95,7 +95,7 @@ export default function App() {
     }
   }, [isDarkMode]);
 
-  //when save or create is pressed this should happen-
+  //when save or create is pressed this should happen:
   function saveTask() {
     if (!form.title.trim()) return;
 
