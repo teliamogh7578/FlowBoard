@@ -27,6 +27,14 @@ This is a production-ready frontend project demonstrating a clean and modern Kan
 
 ---
 
+## 🧪 Demo Mode
+
+The board loads with **sample tasks by default** so you can instantly see how the Kanban workflow operates.
+
+Feel free to **move, edit, or delete the demo tasks** to experiment with the interface and understand the workflow.
+
+---
+
 ## Key Features
 
 **Kanban Board Workflow**  
