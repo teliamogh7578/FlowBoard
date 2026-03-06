@@ -1,8 +1,3 @@
-/* =====================================================================
-   RESET
-   Remove all default browser spacing.
-   box-sizing: border-box means padding is included in element widths.
-===================================================================== */
 *,
 *::before,
 *::after {
@@ -11,11 +6,6 @@
   padding: 0;
 }
 
-/* =====================================================================
-   CSS VARIABLES
-   Define all colours and sizes once here so they are easy to change.
-   Use them anywhere below with var(--name).
-===================================================================== */
 :root {
   --bg: #f8f9fa; /* page background colour */
   --surface: #ffffff; /* cards, header, modal background */
@@ -38,9 +28,30 @@
   --transition: 0.15s ease;
 }
 
-/* =====================================================================
-   BASE
-===================================================================== */
+/* Dark mode */
+.dark-mode {
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --surface-hover: #2d2d2d;
+  --border: #3d3d3d;
+  --text: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #808080;
+  --blue-light: #1a3a4d;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.2);
+  --shadow-2: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-3: 0 4px 8px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .toggle-circle {
+  background: #1e1e1e !important;
+}
+
+body {
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
 html,
 body {
   height: 100%;
@@ -54,19 +65,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* =====================================================================
-   APP SHELL
-   Outer flex column — stacks header, stats strip, filter bar, board.
-===================================================================== */
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* =====================================================================
-   HEADER
-===================================================================== */
+/* Header */
 .header {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -106,11 +111,9 @@ body {
   /* border-right: 1px solid var(--border); */
 }
 
-/* =====================================================================
-   BUTTONS
-===================================================================== */
+/* Buttons */
 
-/* Blue filled pill — used for "New task" */
+/* New task button */
 .btn-filled {
   display: inline-flex;
   align-items: center;
@@ -134,7 +137,7 @@ body {
   box-shadow: var(--shadow-2);
 }
 
-/* Ghost text button — used for Cancel */
+/* cancel */
 .btn-text {
   height: 36px;
   padding: 0 14px;
@@ -152,7 +155,7 @@ body {
   background: var(--blue-light);
 }
 
-/* Solid blue button — used for Create / Save */
+/* Create or save */
 .btn-contained {
   height: 36px;
   padding: 0 20px;
@@ -178,10 +181,7 @@ body {
   cursor: not-allowed;
 }
 
-/* =====================================================================
-   STATS STRIP
-   Row of coloured pill badges + progress bar below the header.
-===================================================================== */
+/* progress indicator  */
 .stats-strip {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -231,13 +231,10 @@ body {
   height: 100%;
   background: var(--green);
   border-radius: 3px;
-  transition: width 0.4s ease; /* smooth animation when percentage changes */
+  transition: width 0.4s ease;
 }
 
-/* =====================================================================
-   FILTER BAR
-   Search box + priority filter buttons.
-===================================================================== */
+/* Filter bar */
 .filter-bar {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -248,7 +245,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Wrapper positions the magnifier icon inside the input */
 .search-wrap {
   position: relative;
   display: flex;
@@ -262,7 +258,7 @@ body {
   position: absolute;
   left: 11px;
   color: var(--text-tertiary);
-  pointer-events: none; /* clicks pass through to the input underneath */
+  pointer-events: none;
 }
 
 .search-input {
@@ -313,7 +309,7 @@ body {
   color: var(--text);
 }
 
-/* Row of priority filter buttons */
+/* line of priority filter buttons */
 .priority-filters {
   display: flex;
   align-items: center;
@@ -321,7 +317,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Each filter button pill */
+/* Each filter button  */
 .pf-btn {
   display: inline-flex;
   align-items: center;
@@ -343,21 +339,18 @@ body {
   background: var(--surface-hover);
 }
 
-/* Active priority filter — colours injected inline from JS */
 .pf-btn.active {
   background: var(--pf-bg);
   color: var(--pf-text);
   border-color: var(--pf-dot);
 }
 
-/* "All" button active style (no colour variables needed) */
 .pf-btn.all-active {
   background: var(--surface-hover);
   color: var(--text);
   border-color: var(--text-tertiary);
 }
 
-/* Coloured dot inside each filter button */
 .pf-dot {
   width: 6px;
   height: 6px;
@@ -365,9 +358,7 @@ body {
   flex-shrink: 0;
 }
 
-/* =====================================================================
-   SOCIAL LINKS
-===================================================================== */
+/* Social */
 .social-links {
   display: flex;
   align-items: center;
@@ -401,10 +392,7 @@ body {
   color: #333333;
   background: rgba(51, 51, 51, 0.1);
 }
-
-/* =====================================================================
-   BOARD
-===================================================================== */
+/* Main Board */
 .board-wrap {
   flex: 1;
   padding: 24px;
@@ -420,9 +408,7 @@ body {
   margin: 0 auto;
 }
 
-/* =====================================================================
-   COLUMN
-===================================================================== */
+/* columna */
 .column {
   display: flex;
   flex-direction: column;
@@ -436,7 +422,6 @@ body {
     box-shadow var(--transition);
 }
 
-/* Highlighted when dragging a card over this column */
 .column.drag-over {
   border-color: var(--col-accent);
   box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.15);
@@ -450,7 +435,6 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-/* Thin coloured bar on left side of column header */
 .col-bar {
   width: 4px;
   height: 20px;
@@ -476,7 +460,6 @@ body {
   border-radius: 10px;
 }
 
-/* + button to quickly add a task in this column */
 .col-add {
   width: 28px;
   height: 28px;
@@ -507,7 +490,6 @@ body {
   gap: 8px;
 }
 
-/* Shown when a column has no tasks */
 .col-empty {
   flex: 1;
   display: flex;
@@ -525,9 +507,7 @@ body {
   opacity: 0.3;
 }
 
-/* =====================================================================
-   TASK CARD
-===================================================================== */
+/* todo card */
 .task-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -540,7 +520,6 @@ body {
     transform var(--transition);
 }
 
-/* Card pops in when first added */
 @keyframes cardIn {
   from {
     opacity: 0;
@@ -557,13 +536,12 @@ body {
   transform: translateY(-1px);
 }
 
-/* Semi-transparent while being dragged */
+/* semi transparent while being dragged */
 .task-card.dragging {
   opacity: 0.4;
   cursor: grabbing;
 }
 
-/* Top row: title + icon buttons */
 .card-top {
   display: flex;
   align-items: flex-start;
@@ -578,8 +556,7 @@ body {
   line-height: 1.45;
   flex: 1;
 }
-
-/* Clamp description to 2 lines */
+/* card desc */
 .card-desc {
   font-size: 12px;
   color: var(--text-secondary);
@@ -591,7 +568,6 @@ body {
   overflow: hidden;
 }
 
-/* Edit + Delete buttons — only visible on hover */
 .card-actions {
   display: flex;
   gap: 2px;
@@ -603,7 +579,6 @@ body {
   opacity: 1;
 }
 
-/* Small circular icon button */
 .icon-btn {
   width: 26px;
   height: 26px;
@@ -628,7 +603,49 @@ body {
   color: var(--red);
 }
 
-/* Bottom section of card showing priority badge */
+/* Toggle Switch  */
+.toggle-switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  margin-right: 16px;
+  border: none;
+  background: var(--border);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.toggle-switch:hover {
+  background: var(--text-tertiary);
+}
+
+.toggle-switch.active {
+  background: #1a73e8;
+}
+
+.toggle-switch.active:hover {
+  background: #1565cc;
+}
+
+.toggle-circle {
+  position: absolute;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: var(--surface);
+  border-radius: 50%;
+  transition: left var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.active .toggle-circle {
+  left: 26px;
+}
+
 .card-footer {
   margin-top: 9px;
   padding-top: 8px;
@@ -639,7 +656,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Coloured priority pill on the card */
 .priority-badge {
   display: inline-flex;
   align-items: center;
@@ -650,7 +666,6 @@ body {
   font-weight: 500;
 }
 
-/* Small dot inside the priority badge */
 .pb-dot {
   width: 5px;
   height: 5px;
@@ -658,7 +673,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Dashed drop zone shown when dragging a card into an empty column */
+/* Dashed area shown when dragging a card into an khali column */
 .drop-ph {
   border: 2px dashed var(--col-accent);
   border-radius: var(--radius-sm);
@@ -675,9 +690,7 @@ body {
   }
 }
 
-/* =====================================================================
-   PRIORITY PICKER (inside the modal)
-===================================================================== */
+/* priority picker  */
 .priority-picker {
   display: flex;
   gap: 8px;
@@ -705,7 +718,7 @@ body {
   border-color: var(--pp-dot);
   color: var(--pp-text);
 }
-/* Selected priority gets its colour as background */
+
 .pp-option.selected {
   background: var(--pp-bg);
   color: var(--pp-text);
@@ -720,11 +733,6 @@ body {
   background: var(--pp-dot);
 }
 
-/* =====================================================================
-   MODAL
-===================================================================== */
-
-/* Dark backdrop behind the modal */
 .overlay {
   position: fixed;
   inset: 0;
@@ -745,7 +753,7 @@ body {
   }
 }
 
-/* The white modal box */
+/* light modal */
 .modal {
   background: var(--surface);
   border-radius: 28px;
@@ -779,7 +787,7 @@ body {
   color: var(--text);
 }
 
-/* × close button */
+/* close button */
 .modal-close {
   width: 36px;
   height: 36px;
@@ -798,7 +806,6 @@ body {
   background: var(--surface-hover);
 }
 
-/* Labelled form group */
 .field {
   margin-bottom: 16px;
 }
@@ -813,7 +820,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Shared styles for all form controls */
 .field input,
 .field textarea,
 .field select {
@@ -850,35 +856,7 @@ body {
   margin-top: 20px;
 }
 
-/* =====================================================================
-   RESPONSIVE
-===================================================================== */
-@media (max-width: 860px) {
-  .board {
-    grid-template-columns: 1fr;
-    min-width: unset;
-  }
-  .board-wrap,
-  .header,
-  .stats-strip,
-  .filter-bar {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .progress-wrap {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .wordmark-suffix {
-    display: none;
-  }
-}
-
-/* =====================================================================
-   SCROLLBAR (Chrome / Edge / Safari)
-===================================================================== */
+/* scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

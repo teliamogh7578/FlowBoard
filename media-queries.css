@@ -1,0 +1,24 @@
+/* Tablet and smaller pcs */
+@media (max-width: 860px) {
+  .board {
+    grid-template-columns: 1fr;
+    min-width: unset;
+  }
+  .board-wrap,
+  .header,
+  .stats-strip,
+  .filter-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .progress-wrap {
+    display: none;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .wordmark-suffix {
+    display: none;
+  }
+}
