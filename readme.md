@@ -18,13 +18,7 @@ This project demonstrates **React state management, drag-and-drop interactions, 
 
 ---
 
-## Live Demo
 
-Explore the FlowBoard experience:
-
-🔗 https://your-vercel-link-here.vercel.app
-
-This is a production-ready frontend project demonstrating a clean and modern Kanban workflow.
 
 ---
 
