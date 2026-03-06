@@ -121,12 +121,6 @@ The layout automatically adjusts to maintain usability on smaller screens.
 
 The Kanban board state is managed using **React state**.
 
-Tasks are stored in a structured object:
-{
-todo: [],
-inprogress: [],
-done: []
-}
 
 Whenever tasks are created, edited, deleted, or moved between columns:
 
