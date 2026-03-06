@@ -17,8 +17,13 @@ Users can create tasks, move them between columns, assign priorities, and track 
 This project demonstrates **React state management, drag-and-drop interactions, responsive UI design, and persistent client-side storage**.
 
 ---
+## Live Demo
 
+Explore the FlowBoard experience:
 
+🔗 https://flowboardapp.netlify.app/
+
+This is a production-ready frontend project demonstrating a clean and modern Kanban workflow.
 
 ---
 
