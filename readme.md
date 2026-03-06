@@ -99,7 +99,7 @@ The layout automatically adjusts to maintain usability on smaller screens.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **React** — UI architecture and state management
 - **Vite** — Fast development server and build tool
@@ -109,7 +109,7 @@ The layout automatically adjusts to maintain usability on smaller screens.
 
 ---
 
-## 📐 Application Architecture
+## Application Architecture
 
 The Kanban board state is managed using **React state**.
 
