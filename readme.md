@@ -7,6 +7,7 @@
 ![Drag%20%26%20Drop](https://img.shields.io/badge/Drag%20%26%20Drop-Enabled-success)
 ![LocalStorage](https://img.shields.io/badge/Data-Persisted-orange)
 ![Netlify](https://img.shields.io/badge/Deployed-Netlify-00C7B7?logo=netlify&logoColor=white)
+
 **FlowBoard: Visual Task Management, Simplified**
 
 FlowBoard is a modern **Kanban-style task management web application** that helps users organize work visually across workflow stages.
