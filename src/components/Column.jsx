@@ -20,7 +20,7 @@ export default function Column({
 
   return (
     <div
-      className={"column" + (isOver ? " drag-over" : "")}
+      className={"column " + col.id + "-column" + (isOver ? " drag-over" : "")}
       style={{
         "--col-accent": col.accent,
         "--col-chip": col.chip,
