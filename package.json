@@ -1,7 +1,7 @@
 {
-  "name": "kanban_todolist",
+  "name": "FlowBoard",
   "version": "1.0.0",
-  "description": "",
+  "description": "FlowBoard is a responsive Kanban task management web application built with React and Vite, featuring drag-and-drop task movement, priority labels, search filtering, and localStorage persistence.",
   "main": "script.js",
   "scripts": {
     "dev": "vite",
