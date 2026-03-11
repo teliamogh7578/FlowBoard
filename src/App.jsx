@@ -4,7 +4,6 @@ import {
   loadBoard,
   saveBoard,
   COLUMNS,
-  PRIORITIES,
 } from "./constants";
 import Header from "./components/Header";
 import StatsStrip from "./components/StatsStrip";
@@ -158,7 +157,11 @@ export default function App() {
       return;
     }
 
-    const newBoard = Object.assign({}, board);
+    const newBoard = {
+      todo: [...(board.todo || [])],
+      inprogress: [...(board.inprogress || [])],
+      done: [...(board.done || [])],
+    };
     const idx = newBoard[drag.srcColId].findIndex((t) => t.id === drag.taskId);
     if (idx === -1) {
       setDrag(null);

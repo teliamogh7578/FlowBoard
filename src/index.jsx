@@ -4,7 +4,5 @@ import App from "./App";
 import "../style.css";
 import "../media-queries.css";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(<App />);
-});
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
